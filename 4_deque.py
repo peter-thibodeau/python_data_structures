@@ -9,7 +9,7 @@ class DequeQueue:
 
     def dequeue(self):
         if not self.is_empty(): # call is_empty method
-            return self.queue.popleft() # return first item in list
+            return self.queue.popleft() # return first item in queue
         else:
             return "Queue is empty"
 
@@ -20,9 +20,10 @@ class DequeQueue:
     def size(self):
         return len(self.queue)  # return size of queue
 
-# create an instance of Queue
+# create an instance of DequeQueue
 q = DequeQueue()
 
+# add some items to the instance of DequeQueue
 q.enqueue(10)
 q.enqueue(20)
 q.enqueue(30)
