@@ -1,4 +1,4 @@
-print('GET FIBONACCI USING RECURSION')
+print('GET FIBONACCI NUMBER USING RECURSION')
 
 def fibonacci(n):
     if n <= 0:
