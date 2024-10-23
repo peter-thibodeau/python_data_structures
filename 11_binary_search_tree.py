@@ -8,7 +8,7 @@ class BinarySearchTree:
     def __init__(self):
         self.root = None
 
-    def insert(self, key):
+    def insert(self, key): # insert nodes into tree
         if self.root is None:
             self.root = Node(key)
         else:
@@ -26,7 +26,7 @@ class BinarySearchTree:
             else:
                 self._insert_rec(current_node.right, key)
 
-    def search(self, key):
+    def search(self, key): # search the node values
         return self._search_rec(self.root, key)
 
     def _search_rec(self, node, key):
@@ -46,7 +46,11 @@ if __name__ == "__main__":
     for node in nodes: # create nodes for the tree
         bst.insert(node)
 
-    # Test cases
+# Test cases
+    search_values = [20, 33, 4]
+    search_results = {value: bst.search(value) for value in search_values}
+    print("Search Results:", search_results)
+
     search_values = [10, 17, 30]
     search_results = {value: bst.search(value) for value in search_values}
     print("Search Results:", search_results)
