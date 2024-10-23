@@ -51,7 +51,7 @@ class BinaryTree:
         while stack:
             current = stack.pop()
             result.append(current.value)
-            # Push right first so that left is processed first
+            # Push right so that left is processed first
             if current.right:
                 stack.append(current.right)
             if current.left:
@@ -85,21 +85,17 @@ class BinaryTree:
         return result
 
 if __name__ == "__main__":
-    # Create a binary tree and insert nodes
-    tree = BinaryTree()
+    tree = BinaryTree() # Create an instance of the binary tree class
     nodes = [15, 10, 20, 8, 12, 17, 25]
-    for node in nodes:
+    for node in nodes: # insert all the nodes
         tree.insert(node)
 
 # Test cases
-    # Test in-order
     in_order_result = tree.in_order_iterative()
     print("In-order Traversal:", in_order_result)
 
-    # Test pre-order
     pre_order_result = tree.pre_order_iterative()
     print("Pre-order Traversal:", pre_order_result)
 
-    # Test post-order
     post_order_result = tree.post_order_iterative()
     print("Post-order Traversal:", post_order_result)
