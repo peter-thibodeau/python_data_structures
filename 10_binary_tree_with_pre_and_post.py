@@ -1,14 +1,14 @@
-class Node:
+class Node: # to create instances of the class node
     def __init__(self, key):
         self.left = None
         self.right = None
         self.value = key
 
-class BinaryTree:
+class BinaryTree: 
     def __init__(self):
         self.root = None
 
-    def insert(self, key):
+    def insert(self, key): # insert nodes into the tree
         if self.root is None:
             self.root = Node(key)
         else:
