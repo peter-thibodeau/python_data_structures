@@ -26,10 +26,10 @@ class BinaryTree:
             else:
                 self._insert_rec(current_node.right, key)
 
-    def in_order(self):
+    def in_order(self): # in order traversal
         return self._in_order_rec(self.root)
 
-    def _in_order_rec(self, node): # in order traversal
+    def _in_order_rec(self, node): 
         return (self._in_order_rec(node.left) + [node.value] +
                 self._in_order_rec(node.right)) if node else []
 
